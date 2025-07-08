@@ -5,9 +5,5 @@ use Garavel\Support\Facades\JsonResponse;
 
 Route::get( '/', function()
 {
-	return JsonResponse::success(
-	[
-		'status' => 'success',
-		'message' => 'Welcome to Garavel Rest API.',
-	]);
+	return JsonResponse::success( 'Welcome to Garavel Rest API.' );
 });
