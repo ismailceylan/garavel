@@ -6,7 +6,11 @@ use Garavel\Support\Facades\Route;
 
 Route::group(
 [
-	'middleware' => Kernel::$groupedMiddlewares[ 'web' ]
+	'middleware' =>
+	[
+		...Kernel::$middlewares,
+		...Kernel::$middlewareGroups[ 'web' ],
+	]
 ],
 function()
 {
@@ -16,7 +20,11 @@ function()
 Route::group(
 [
 	'prefix' => 'api/',
-	'middleware' => Kernel::$groupedMiddlewares[ 'api' ]
+	'middleware' =>
+	[
+		...Kernel::$middlewares,
+		...Kernel::$middlewareGroups[ 'api' ]
+	]
 ],
 function()
 {

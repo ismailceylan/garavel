@@ -8,7 +8,7 @@ class Kernel
 	 * Common middlewares.
 	 * They are gonna work for all types of requests.
 	 */
-    public static array $commonMiddlewares =
+    public static array $middlewares =
 	[
 
 	];
@@ -17,7 +17,7 @@ class Kernel
 	 * Categorized middlewares.
 	 * They are gonna work if they match the type of the request.
 	 */
-	public static array $groupedMiddlewares = 
+	public static array $middlewareGroups = 
 	[
 		'api' =>
 		[
